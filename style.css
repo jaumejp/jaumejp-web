@@ -1,16 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
-.wallpaper:after {
-    content: ' ';
-    border-top: 100vh solid #0D6EFD;
-    border-right: 90vw solid transparent;
-    width: 0;
-    position: absolute;
-  }
-
 body {
-    background: white;
     font-family: 'Muli', sans-serif;
+    background-image: url('./images/blob-scene-haikei.svg');
+    aspect-ratio: 960/300;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;  
 }
 
 .primary-layout {
@@ -43,4 +39,25 @@ footer {
     text-align: center;
     margin-top: 3%;
     margin-bottom: 3%;
+}
+
+/* Blobs SVG background image via https://haikei.app/ */
+
+section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    padding-top: 100px;
+  }
+
+.blob-motion {
+    position: absolute;
+    transform: translateY(-25%);
+    z-index: 0;
+}
+
+.blob-content {
+    z-index: 1;
 }
